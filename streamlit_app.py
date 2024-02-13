@@ -8,4 +8,4 @@ streamlit.text('🐔Hard Boiled free range egg')
 streamlit.text('🥑🍞Avacodo toast')
 streamlit.header('🍌🥭Build your own fruit smoothie🥝🍇')
 my_fruits_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
-streamlit.dataframe(fruits_list);
+streamlit.dataframe(my_fruits_list);
