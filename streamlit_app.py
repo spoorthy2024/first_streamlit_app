@@ -28,5 +28,8 @@ my_cur.execute("SELECT * FROM fruit_load_list")
 my_data_row = my_cur.fetchone()
 streamlit.text("some fruits from fruits_list")
 streamlit.dataframe(my_data_row)
+fruit_add = streamlit.text_input('what fruit would you like to add')
+
+
 
 
