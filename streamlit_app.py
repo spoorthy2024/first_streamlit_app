@@ -25,7 +25,7 @@ streamlit.dataframe(fruityvice_normalized);
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * FROM fruit_load_list")
-my_data_row = my_cur.fetchone()
+my_data_row = my_cur.fetchall()
 streamlit.text("some fruits from fruits_list")
 streamlit.dataframe(my_data_row)
 
