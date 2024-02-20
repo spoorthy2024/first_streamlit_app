@@ -29,7 +29,7 @@ my_data_row = my_cur.fetchone()
 streamlit.text("some fruits from fruits_list")
 streamlit.dataframe(my_data_row)
 fruit_add = streamlit.text_input('what fruit would you like to add')
-my_cur.execute("insert into fruit_load_list values(fruit_add)")
+my_cur.execute("INSERT INTO fruit_load_list values(%s)",(fruit_add,))
 streamlit.text("Thanks for adding " + fruit_add)
 
 
